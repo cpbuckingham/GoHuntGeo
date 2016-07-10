@@ -585,7 +585,7 @@ body.detail .overlay-nav {
   padding-left: 18px;
 }
 .has-dropdown:before {
-  display: inline-block;
+  display: none;
   font-family: 'Pe-icon-7-stroke';
   speak: none;
   font-style: normal;
