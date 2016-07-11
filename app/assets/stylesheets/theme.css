@@ -1002,7 +1002,7 @@ body.detail .sticky-nav .has-dropdown:before {
 .countdown-divider img,
 .countdown-header img,
 .video-header img {
-  max-width: 300px;
+  max-width: 500px;
   display: inline-block;
   margin-bottom: 12px;
 }
@@ -1026,7 +1026,7 @@ body.detail .sticky-nav .has-dropdown:before {
   .countdown-header img,
   .countdown-divider img,
   .video-header img {
-    max-width: 150px;
+    max-width: 500px;
   }
 }
 .countdown {
