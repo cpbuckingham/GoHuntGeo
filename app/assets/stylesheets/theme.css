@@ -1026,7 +1026,7 @@ body.detail .sticky-nav .has-dropdown:before {
   .countdown-header img,
   .countdown-divider img,
   .video-header img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 .countdown {
