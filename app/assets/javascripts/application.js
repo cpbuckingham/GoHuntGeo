@@ -76,7 +76,7 @@ $(document).ready(function() {
     /************** Divider Scripts **************/
 
     $('.background-image-holder').each(function() {
-
+		
         // Append background-image <img>'s as li item CSS background for better responsive performance
         var imgSrc = $(this).children('.background-image').attr('src');
         $(this).css('background', 'url("' + imgSrc + '")');
