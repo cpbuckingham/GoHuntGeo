@@ -6,7 +6,6 @@
         <title>GoHuntGeo</title>
         <%= csrf_meta_tags %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
     </head>
     <body>
@@ -27,6 +26,7 @@
                     <!-- <li><a href="index.html#about">About</a> -->
                     <li><%= link_to "About", about_path, class: "innner-link" %></li>
                     <li><%= link_to "Contact", contact_path, class: "innner-link" %></li>
+                    <li><%= link_to "Register", new_user_path, class: "innner-link" %></li>
                     <li class="social-link"><a href="http://twitter.com/nodevember" target="default"><i class="icon social_twitter"></i></a></li>
                     <li class="social-link"><a href="http://facebook.com/nodevember" target="default"><i class="icon social_facebook"></i></a></li><li class="social-link"><a href="http://youtube.com/nodevember" target="default"><i class="icon social_youtube icon-large"></i></a></li>
 
@@ -47,11 +47,9 @@
 
                 <div class="widget">
                   <ul class="menu">
-                    <li><a class="inner-link" href="index.html#top">About</a></li>
-                    <!-- <li><a class="inner-link" href="conduct.html">Conduct</a></li>
-                    <li><a class="inner-link" href="index.html#cfp">Call for Speakers</a></li>
-                    <li><a class="inner-link" href="index.html#sponsor">Sponsor</a></li> -->
-                    <li><a class="inner-link" href="index.html#about">Contact</a></li>
+                    <li><%= link_to "About", about_path, class: "innner-link" %></li>
+                    <li><%= link_to "Contact", contact_path, class: "innner-link" %></li>
+                    <li><%= link_to "Register", new_user_path, class: "innner-link" %></li>
                     <!-- <li><a class="inner-link" href="https://www.eventbrite.com/e/nodevember-2016-tickets-26149837869">Get Tickets </a></li> -->
                   </ul>
                 </div>
@@ -94,117 +92,8 @@
   						</div>
   					</li>
   				</ul>
-
-
-
   			</section>
 
-      <a id="cfp" name="cfp" class="in-page-link"></a>
-			<section class="inline-video">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-11">
-							<h1>Call for Speakers</h1>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-6">
-              <h3>What should I speak about?</h3>
-              <p class="lead">
-                In short, anything JavaScript or Node.js related. We want to make a special emphasis on covering unique things at Nodevember. We also want to have a bit of fun, so bring on the weird, odd and wonderful JavaScript talks!<br/><br/>
-                <strong>Talks</strong> are the traditional talk sessions given during the main conference days. They’re mostly 30 minutes long, but we offer a limited number of 45 minute slots. We organize the schedule into three “tracks”, grouping talks by topic and having them in the same room for consecutive sessions<br/>
-                <strong>Tutorials</strong>, as with the talks, should be sessions that can grow this community at any level. We aim for tutorials that will advance JavaScript and Node.js, advance this community, and shape the future. There are three (3) two-hour tutorial sessions and four (4) one-hour tutorial sessions available. <br/><br/>
-              </p>
-              <h3>Code of Conduct</h3>
-              <p class="lead">All speakers, sponsors, and guests must agree and follow our code of conduct.</p>
-							<a href="/conduct.html" class="btn">Code of Conduct</a>
-							<a href="https://www.papercall.io/nodevember2016" target="_blank" class="btn btn-hollow">Submit Talk</a>
-						</div>
-
-						<div class="col-md-6">
-							<div class="embedded-video-holder vju">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/DUgMIhCibvE" frameborder="0" allowfullscreen></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-      <section class="strip-divider primary-overlay">
-        <div class="background-image-holder parallax-background">
-          <!-- <img class="background-image" alt="Background Image" src="img/hero.jpg"> -->
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <h1 class="text-white">Interested in speaking at Nodevember 2016? <a href="https://www.papercall.io/nodevember2016" target="_blank">Submit a Talk</a></h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <a id="pricing-options" class="in-page-link"></a>
-			<section class="pricing-options">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<h1>Get Tickets</h1>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6">
-							<a href="https://www.eventbrite.com/e/nodevember-2016-tickets-26149837869" target="_blank">
-								<div class="pricing-option emphasis">
-
-									<div class="dot"></div>
-
-									<div class="col-md-6 text-center">
-										<span class="dollar">$</span>
-										<span class="price">250</span><span class="type">early bird</span>
-									</div>
-
-									<div class="col-md-6">
-										<span class="plan-title">Conference Supporter</span>
-										<ul>
-											<li>General Sessions + Keynotes</li>
-											<li>+ T-shirts and Stickers</li>
-                      <li>+ Breakfast and Lunch Daily</li>
-                      <li>+ Free Snacks and Drinks</li>
-										</ul>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-sm-6">
-							<a href="https://www.eventbrite.com/e/nodevember-2016-tickets-26149837869" target="_blank">
-								<div class="pricing-option">
-
-									<div class="dot"></div>
-
-									<div class="col-md-6 text-center">
-										<span class="dollar">$</span>
-										<span class="price">350</span><span class="type">General Admission</span>
-									</div>
-
-									<div class="col-md-6">
-										<span class="plan-title">All Days</span>
-										<ul>
-                      <li>General Sessions + Keynotes</li>
-											<li>+ T-shirts and Stickers</li>
-                      <li>+ Breakfast and Lunch Daily</li>
-                      <li>+ Free Snacks and Drinks</li>
-										</ul>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
 
       <a id="sponsor" name="sponsor" class="in-page-link"></a>
       <section class="strip-divider call-to-action">
@@ -232,7 +121,7 @@
 
 			<section class="subscribe-1">
 					<div class="background-image-holder">
-						<img class="background-image" alt="Background Image" src="DSC00245_2.jpg">
+						<img class="background-image" alt="Background Image" src="IMG_7578.jpg">
 					</div>
 
 					<div class="container">
@@ -253,9 +142,9 @@
 
 								<div class="col-sm-9 text-right">
 									<ul class="menu">
-										<li><%= link_to "About", about_path%></li>
-										<li><a href="mailto:contact@gohuntgeo.com?subject=contact_page Contact Form">Contact</a></li>
-										<li><a class="inner-link back-to-top" href="#top">Back To Top&nbsp;<i class="icon pe-7s-angle-up-circle"></i></a></li>
+                    <li><%= link_to "About", about_path%></li>
+                    <li><%= link_to "Contact", contact_path%></li>
+                    <li><%= link_to "Register", new_user_path%></li>
 									</ul>
 								</div>
 							</div></div>
