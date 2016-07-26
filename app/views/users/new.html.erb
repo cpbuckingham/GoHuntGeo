@@ -1,8 +1,21 @@
-<h1>Sign Up</h1>
 
-<%= form_for @user do |f| %>
-<%= f.text_field :email%>
-<%= f.password_field :password%>
-<%= f.password_field :password_confirmation%>
-<%= f.submit :Signup, class:"btn btn-primary"%>
+<div class="signup">
+<h1>Sign up</h1>
+
+<%= form_tag sign_up_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p>
+    <%= label_tag :password_confirmation %><br />
+    <%= password_field_tag :password_confirmation %>
+  </p>
+  <br />
+  <p class="btn"><%= submit_tag "Register" %></p>
 <% end %>
+</div>

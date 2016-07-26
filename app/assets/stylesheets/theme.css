@@ -2523,3 +2523,11 @@ footer.classic .social-profiles {
   color: #219178;
   border: 2px solid #219178;
 }
+.signup{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
