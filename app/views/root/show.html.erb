@@ -16,9 +16,10 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-2">
-                  <img alt="Logo" class="logo logo-light" src="logo.png">
-                  <img alt="Logo" class="logo logo-dark" src="logo-black.png">
-                  </a>
+                  <%= link_to root_path do %>
+                  <%= image_tag "logo.png", alt:"Logo", class:"logo logo-light"%>
+                  <%= image_tag "logo-black.png", alt:"Logo", class:"logo logo-dark"%>
+                  <% end %>
                 </div>
                 <div class="col-md-10 text-right">
                   <ul class="menu">
@@ -160,11 +161,11 @@
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
-        <!-- <script src="js/bootstrap.min.js"></script>
-        <script src="js/skrollr.min.js"></script>
-        <script src="js/jquery.plugin.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/application.js"></script> -->
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <!-- <script src="js/skrollr.min.js"></script> -->
+        <!-- <script src="js/jquery.plugin.min.js"></script> -->
+        <!-- <script src="js/jquery.countdown.min.js"></script> -->
+        <!-- <script src="js/smooth-scroll.min.js"></script> -->
+        <!-- <script src="js/application.js"></script> -->
     </body>
 </html>
