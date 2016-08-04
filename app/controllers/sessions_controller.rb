@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to dashboard_path
+      redirect_to dashboard_path(user.id)
     else
       render "new"
     end
