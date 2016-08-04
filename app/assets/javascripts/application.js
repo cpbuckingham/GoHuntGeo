@@ -76,7 +76,7 @@ $(document).ready(function() {
     /************** Divider Scripts **************/
 
     $('.background-image-holder').each(function() {
-		
+
         // Append background-image <img>'s as li item CSS background for better responsive performance
         var imgSrc = $(this).children('.background-image').attr('src');
         $(this).css('background', 'url("' + imgSrc + '")');
@@ -156,12 +156,12 @@ $(window).load(function() {
 
 
 
-    // setTimeout(function() {
-    //     setTimeout(function() {
-    //         $('.main-container').addClass('show-content');
-    //         $('nav').addClass('show-content');
-    //     }, 500);
-    // }, 10);
+    setTimeout(function() {
+        setTimeout(function() {
+            $('.main-container').addClass('show-content');
+            $('nav').addClass('show-content');
+        }, 500);
+    }, 10);
 
 
 });
