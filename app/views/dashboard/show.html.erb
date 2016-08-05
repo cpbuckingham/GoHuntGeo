@@ -1,1 +1,39 @@
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+var geocoder = new google.maps.Geocoder();
+function test()
+{
+    var address=document.getElementById("address").value;
+    var local = document.getElementById("local");
+    var latitude=40;
+    var longitude=0;
+    geocoder.geocode( { 'address': address}, function(results, status)
+    {
+        if (status==google.maps.GeocoderStatus.OK)
+        {
+            latlng=(results[0].geometry.location);
+            latitude=latlng.lat();
+            longitude=latlng.lng();
+            //store the state abbreviation in the variable local
+            for(var ix=0; ix< results[0].address_components.length; ix++)
+            {
+                if (results[0].address_components[ix].types[0] == "administrative_area_level_1")
+                {
+                    local.value=results[0].address_components[ix].short_name;
+                }
+            }
+        }
+        else
+        {
+            alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
+}
+</script>
 <h1>dashboard#show</h1>
+<body>
+    <input type='text' id='address' value='84102' />
+    <input type='text' id='local' value='' />
+    <a href='#' onclick="test();" >try</a>
+</body>
